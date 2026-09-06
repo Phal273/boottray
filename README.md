@@ -42,3 +42,16 @@ No silent inserts. No mystery changes. Just a tray and a decision.
 Run the TypeScript watcher with the compile command from package.json.
 
 The project uses the VS Code Extension API and TypeScript. It has no remote, no service, and no model dependency.
+
+## Install from VSIX
+
+### VS Code
+1. Build the package with the package script.
+2. In VS Code, open the Extensions view.
+3. Select the three-dot menu, choose Install from VSIX, and select boottray-0.1.0.vsix.
+
+### Cursor
+
+1. Build the package with the package script.
+2. Open Cursor and open the Extensions view.
+3. Select the three-dot menu, choose Install from VSIX, and select boottray-0.1.0.vsix.
