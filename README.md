@@ -37,6 +37,19 @@ Screenshots belong here. The UI is intentionally dark ink, warm paper, and boot 
 I got tired of cleaning up edits I never explicitly approved. The editor should not become a suggestion landfill. Boottray treats each selection like a patch from a teammate: show the work, let me inspect it, then let me say yes.
 
 No silent inserts. No mystery changes. Just a tray and a decision.
+## Website
+
+The marketing landing page lives in `site/`. `npm run build` copies those static files into `dist/` for Cloudflare Pages. You can also point Pages at `site` directly if the build command is empty.
+
+Production domain: https://boottray.zoitra.com
+
+If the Pages project still uses the old extension `dist` layout, set **Settings → Builds** to:
+
+- Build command: `npm run build`
+- Build output directory: `dist`
+
+Extension compile stays on `npm run compile`. Packaging stays on `npm run package`.
+
 ## Development
 
 Run the TypeScript watcher with the compile command from package.json.
