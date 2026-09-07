@@ -3,26 +3,93 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Boottray stages editor selections before they touch your files.">
-  <title>Boottray | Stage selections before they hit your files</title>
+  <meta name="description" content="Boottray is a VS Code and Cursor extension that stages editor selections in a review tray. Accept applies a WorkspaceEdit. Reject discards it. Nothing writes until you say yes.">
+  <title>Boottray — wipe your feet before edits enter the house</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,620&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <main class="page">
-    <nav class="nav"><a class="brand" href="./">boottray</a><span class="nav-note">stage first, write second</span></nav>
-    <section class="hero">
-      <p class="eyebrow">VS Code &amp; Cursor extension</p>
-      <h1>Stage editor selections before they touch your files.</h1>
-      <p class="intro">Boottray holds proposed edits in a tray so you can review them calmly. No account, no subscription, no fuss.</p>
-      <a class="button" href="https://github.com/Phal273/boottray/releases/tag/v0.1.0">Download Boottray <span aria-hidden="true">↗</span></a>
-      <p class="release">Version 0.1.0 · VSIX release · free</p>
-    </section>
-    <section class="details" aria-label="About Boottray">
-      <article><span class="number">01</span><h2>Install the VSIX</h2><p>Download the <strong>.vsix</strong> from the release page. In VS Code or Cursor, open Extensions, open the menu, then choose <em>Install from VSIX...</em>.</p></article>
-      <article><span class="number">02</span><h2>Stage a selection</h2><p>Highlight code, run <em>Boottray: Stage Selection</em>, and review the proposed change in the Boottray panel before anything is written.</p></article>
-      <article><span class="number">03</span><h2>Apply when ready</h2><p>Keep edits nearby until you are sure. Apply what you want, discard the rest. Updates land on GitHub as new releases.</p></article>
-    </section>
-    <footer><span>Made for calm workflows.</span><a href="https://github.com/Phal273/boottray/releases/tag/v0.1.0">See the release notes</a></footer>
-  </main>
+  <div class="threshold" aria-hidden="true"></div>
+
+  <div class="sheet">
+    <header class="masthead">
+      <a class="wordmark" href="./">boottray</a>
+      <a class="source" href="https://github.com/Phal273/boottray">source on GitHub</a>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="lede">
+          <h1>Wipe your feet.</h1>
+          <p>
+            Boottray is a small extension for VS&nbsp;Code and Cursor.
+            You stage an editor selection into a review tray, inspect the hunk,
+            then Accept or Reject. Accept applies a <code>WorkspaceEdit</code>.
+            Reject throws it out. The file does not change until you pick.
+          </p>
+          <p class="cta">
+            <a class="btn" href="https://github.com/Phal273/boottray/releases/tag/v0.1.0">Download the VSIX</a>
+            <span>v0.1.0 · free · not on the marketplace</span>
+          </p>
+        </div>
+
+        <figure class="tray-stage">
+          <div class="tray" aria-hidden="true">
+            <div class="tray-head">
+              <span class="mark">✓</span>
+              <div>
+                <strong>Boottray</strong>
+                <small>Nothing lands without a yes.</small>
+              </div>
+              <span class="count">1</span>
+            </div>
+            <div class="proposal">
+              <div class="proposal-top">
+                <span class="file">src/mudroom.ts</span>
+                <span class="meta">manual stage · just now</span>
+              </div>
+              <pre><span class="minus">walkIn(muddyBoots)</span><span class="plus">leaveOnTray(boots)</span></pre>
+              <div class="actions">
+                <span class="accept">Accept</span>
+                <span class="reject">Reject</span>
+              </div>
+            </div>
+          </div>
+          <figcaption>The tray, sitting by the door. Your files are still the house.</figcaption>
+        </figure>
+      </section>
+
+      <section class="use">
+        <h2>How it actually works</h2>
+        <p>
+          Highlight some text — or don’t, and it stages the whole file.
+          Run <code>Boottray: Stage Selection</code> from the Command Palette.
+          Open the Boottray icon in the activity bar. Expand the card, read the hunk.
+        </p>
+        <p>
+          Accept writes. Reject doesn’t. Either way, nothing slips into the
+          document on its own. Think of it as a mudroom: leave the boots on
+          the tray before they track through the house.
+        </p>
+      </section>
+
+      <aside class="install">
+        <h2>Install the VSIX</h2>
+        <ol>
+          <li>Grab <code>boottray-0.1.0.vsix</code> from the <a href="https://github.com/Phal273/boottray/releases/tag/v0.1.0">v0.1.0 release</a>.</li>
+          <li>In VS&nbsp;Code or Cursor, open the Extensions view.</li>
+          <li>Open the ⋯ menu and choose <em>Install from VSIX…</em></li>
+          <li>Pick the file. Then Command Palette → <code>Boottray: Stage Selection</code>.</li>
+        </ol>
+        <p class="note">That’s the whole path. No account, because there is no service.</p>
+      </aside>
+    </main>
+
+    <footer>
+      <p>Ethan / <a href="https://github.com/Phal273">Phal273</a></p>
+    </footer>
+  </div>
 </body>
 </html>
