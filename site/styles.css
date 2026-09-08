@@ -91,6 +91,25 @@ header {
   margin-bottom: 2.4rem;
 }
 
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+  text-decoration: none;
+  color: inherit;
+}
+.logo {
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 0.55rem;
+  flex: none;
+}
+.mark-logo {
+  width: 1.35rem;
+  height: 1.35rem;
+  border-radius: 0.28rem;
+  flex: none;
+}
 .wordmark {
   color: var(--ink);
   font-family: Fraunces, Georgia, serif;
