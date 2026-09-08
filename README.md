@@ -25,36 +25,20 @@ Open this folder in VS Code or Cursor, then press `F5`. A new Extension Developm
 2. Open the Boottray icon in the activity bar.
 3. Expand the proposal and inspect the hunk.
 4. Click `Accept` to apply it, or `Reject` to discard it. The editor stays unchanged until you accept.
-## Screenshots
-
-Screenshots belong here. The UI is intentionally dark ink, warm paper, and boot brown. No clutter.
-
-- `docs/boottray-empty.png` - clean tray
-- `docs/boottray-diff.png` - staged hunk review
 
 ## Why it exists
 
 I got tired of cleaning up edits I never explicitly approved. The editor should not become a suggestion landfill. Boottray treats each selection like a patch from a teammate: show the work, let me inspect it, then let me say yes.
 
 No silent inserts. No mystery changes. Just a tray and a decision.
-## Website
-
-The marketing landing page lives in `site/`. `npm run build` copies those static files into `dist/` for Cloudflare Pages. You can also point Pages at `site` directly if the build command is empty.
-
-Production domain: https://boottray.zoitra.com
-
-If the Pages project still uses the old extension `dist` layout, set **Settings → Builds** to:
-
-- Build command: `npm run build`
-- Build output directory: `dist`
-
-Extension compile stays on `npm run compile`. Packaging stays on `npm run package`.
 
 ## Development
 
 Run the TypeScript watcher with the compile command from package.json.
 
 The project uses the VS Code Extension API and TypeScript. It has no remote, no service, and no model dependency.
+
+Site: https://boottray.zoitra.com
 
 ## Install from VSIX
 
